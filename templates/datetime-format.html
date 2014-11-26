@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}datetime format {% endblock %}
+{% block body %}
+<form name="t_form" action="/datetime-format">
+    <input name="t" {% if t %}value="{{ t }}"{% endif %} />
+    <input type="submit" />
+</form>
+{% if t %}
+<div>
+    UTC: {{ d_utc }}
+</div>
+<div>
+    北京时间: {{ d_china }}
+</div>
+{% endif %}
+<script>
+document.t_form.t.focus()
+</script>
+{% endblock %}
