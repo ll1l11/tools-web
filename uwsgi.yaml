@@ -1,0 +1,11 @@
+uwsgi:
+    uid: www-data
+    gid: www-data
+    socket: /var/run/tools-web.sock
+    chown-socket: www-data:www-data
+    plugin: python
+    pythonpath: /home/p3/github/tools-web
+    module: tools
+    callable: app
+
+
